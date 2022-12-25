@@ -4,14 +4,16 @@ import InstagramIcon from "./InstagramIcon.astro"
 import SubstackIcon from "./SubstackIcon.astro"
 ---
 
-<header class="grid grid-cols-4 width-[100vw] height-[5vh] p-[2.5vh] m-0 top-0">
-  <div class="text-left">
-    <Hamburger />
-  </div>
-  <h1 class="text-center uppercase text-xl p-0 col-span-2">Sarah Blake</h1>
-  <div class="text-right">
-    <InstagramIcon />
-    <SubstackIcon />
+<header class="width-screen height-[5vh] p-[2.5vh] bg-white">
+  <div class="grid grid-cols-4 max-w-screen-2xl m-auto">
+    <div class="text-left">
+      <Hamburger />
+    </div>
+    <h1 class="text-center uppercase text-xl p-0 col-span-2">Sarah Blake</h1>
+    <div class="text-right">
+      <InstagramIcon />
+      <SubstackIcon />
+    </div>
   </div>
 </header>
 
