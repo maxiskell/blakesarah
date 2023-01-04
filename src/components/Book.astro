@@ -3,7 +3,6 @@ interface Props {
   title: string
   description: string
   buyLink: string
-  hasVideo?: boolean
   videoSrc?: string
 }
 
@@ -11,8 +10,7 @@ const {
   title,
   description,
   buyLink,
-  hasVideo = false,
-  videoSrc = "",
+  videoSrc,
 } = Astro.props
 ---
 
@@ -39,7 +37,7 @@ const {
   </article>
 
   {
-    hasVideo && (
+    videoSrc && (
       <video
         autoplay
         loop
