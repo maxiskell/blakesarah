@@ -1,26 +1,24 @@
 ---
 interface Props {
-  title: string
-  description: string
   buyLink: string
+  coverImgSrc: string
+  description: string
+  title: string
   videoSrc?: string
 }
 
-const {
-  title,
-  description,
-  buyLink,
-  videoSrc,
-} = Astro.props
+const { coverImgSrc, title, description, buyLink, videoSrc } = Astro.props
 ---
 
 <section
   class="relative p-[2.5vh] flex items-center justify-center h-screen w-screen overflow-hidden"
 >
-  <article class="relative z-30 text-white grid grid-cols-3 max-w-screen-2xl pt-5">
+  <article
+    class="relative z-30 text-white grid grid-cols-3 max-w-screen-2xl pt-5"
+  >
     <div class="col-span-1">
       <img
-        src="/img/mr-west.jpeg"
+        src={`/img/${coverImgSrc}`}
         alt=""
         class="min-w-[100%] shadow-[0px_0px_10px_rgba(0,0,0,0.3)]"
       />
