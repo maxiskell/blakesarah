@@ -14,18 +14,19 @@ const { coverImgSrc, title, description, buyLink, videoSrc } = Astro.props
   class="relative p-[2.5vh] flex items-center justify-center h-screen w-screen overflow-hidden"
 >
   <article
-    class="relative z-30 text-white grid grid-cols-3 max-w-screen-2xl pt-5"
+    class="relative z-30 text-white grid grid-cols-1 md:grid-cols-3 max-w-screen-2xl pt-5"
   >
-    <div class="col-span-1">
+    <div class="grid place-items-center col-span-full mt-5 md:col-span-1">
       <img
         src={`/img/${coverImgSrc}`}
         alt=""
-        class="min-w-[100%] shadow-[0px_0px_10px_rgba(0,0,0,0.3)]"
+        class="max-w-[50%]  md:min-w-[100%] shadow-[0px_0px_10px_rgba(0,0,0,0.3)]"
       />
     </div>
-    <div class="col-span-2 ml-2 text bg-black bg-opacity-50 p-6">
-      <h2 class="text-5xl">{title}</h2>
-      <p>
+
+    <div class="col-span-full md:col-span-2 ml-2 text p-6 text-center">
+      <h2 class="text-4xl md:text-8xl font-bold shadow-black bg-black bg-opacity-10">{title}</h2>
+      <p class="">
         {description}
       </p>
       <div class="btns">
@@ -38,6 +39,7 @@ const { coverImgSrc, title, description, buyLink, videoSrc } = Astro.props
     videoSrc && (
       <video
         autoplay
+        playsinline
         loop
         muted
         class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
