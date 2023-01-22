@@ -1,14 +1,14 @@
 ---
 interface Props {
-  buyLink: string
-  coverImgSrc: string
-  description: string
-  title: string
+  buyLink?: string
+  coverImgSrc?: string
+  description?: string
+  title?: string
   brokenTitle?: string
   videoSrc?: string
 }
 
-const { coverImgSrc, title, brokenTitle, description, buyLink, videoSrc } = Astro.props
+const { coverImgSrc, title, description, buyLink, videoSrc } = Astro.props
 ---
 
 <section
@@ -17,31 +17,30 @@ const { coverImgSrc, title, brokenTitle, description, buyLink, videoSrc } = Astr
   <article
     class="relative z-30 text-white grid grid-cols-1 md:grid-cols-3 max-w-screen-2xl pt-5"
   >
-    <div class="grid place-items-center col-span-full mt-5 md:col-span-1">
+    <div class="grid place-items-left col-span-full md:col-span-1">
       <img
         src={`/img/${coverImgSrc}`}
         alt=""
-        class="max-w-[50%] md:min-w-[100%] shadow-[0px_0px_10px_rgba(0,0,0,0.3)]"
+        class="max-w-[50%] md:min-w-[75%] shadow-[0px_0px_10px_rgba(0,0,0,0.3)]"
       />
     </div>
 
-    <div class="col-span-full md:col-span-2 ml-2 text p-6 text-center">
+    <div class="col-span-full md:col-span-2 ml-2 text-right">
       <h2
-        class="hidden md:visible text-8xl font-bold shadow-black bg-black bg-opacity-10"
+        class="mb-5 inline-block px-2 text-6xl font-bold shadow-black bg-black bg-opacity-10"
       >
         {title}
       </h2>
-      <h2
-        class="md:hidden text-4xl font-bold shadow-black bg-black bg-opacity-10"
-      >
-        {brokenTitle}
-      </h2>
-      <p class="">
+      <p class="text-3xl text-right">
         {description}
       </p>
-      <div class="btns">
-        <a href={buyLink} target="_blank">Buy</a>
-      </div>
+      <a
+        class="inline-block py-2 px-4 mt-5 shadow-[0px_0px_10px_rgba(0,0,0,0.3)] text-2xl text-slate-200 font-semibold hover:text-white bg-slate-700 hover:bg-slate-500"
+        href={buyLink}
+        target="_blank"
+      >
+        Buy
+      </a>
     </div>
   </article>
 
