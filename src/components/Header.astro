@@ -4,10 +4,13 @@ import SubstackIcon from "./SubstackIcon.astro"
 ---
 
 <header
-  class="width-screen height-[5vh] p-[2.5vh] bg-white fixed z-50 w-[100vw]"
+  class="top-0 w-[100vw] height-[5vh] p-[2.5vh] bg-white bg-opacity-20 fixed z-50"
 >
   <div class="grid grid-cols-5 max-w-screen-2xl m-auto items-center">
-    <h1 class="uppercase text-2xl p-0 col-span-1">Sarah Blake</h1>
+    <a class="p-0 col-span-1" href="/">
+      <h1 class="uppercase text-2xl">Sarah Blake</h1>
+    </a>
+
     <nav class="text-right col-span-4">
       <a
         class="align-middle mr-2 text-xl opacity-50 hover:opacity-75"
