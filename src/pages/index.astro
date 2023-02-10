@@ -1,7 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Book from "../components/Book.astro"
+
+import books from '../data/books.json'
 ---
 
 <Layout title="Sarah Blake">
-  <main></main>
+  <main>
+    {books.map((book) => <Book  {...book} />)}
+  </main>
 </Layout>
+
+<style>
+  main {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
