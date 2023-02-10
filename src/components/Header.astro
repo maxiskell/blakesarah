@@ -1,10 +1,16 @@
 ---
 import InstagramIcon from "./InstagramIcon.astro"
 import SubstackIcon from "./SubstackIcon.astro"
+
+export interface Props {
+  transparent?: boolean
+}
+
+const { transparent } = Astro.props
 ---
 
 <header
-  class="top-0 w-[100vw] height-[5vh] p-[2.5vh] bg-white bg-opacity-20 fixed z-50"
+  class={`top-0 w-[100vw] height-[5vh] p-[2.5vh] bg-white ${transparent && "bg-opacity-20"} fixed z-50`}
 >
   <div class="grid grid-cols-5 max-w-screen-2xl m-auto items-center">
     <a class="p-0 col-span-1" href="/">

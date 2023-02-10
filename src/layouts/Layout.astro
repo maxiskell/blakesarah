@@ -1,9 +1,10 @@
 ---
 export interface Props {
   title: string
+  transparentHeader?: boolean
 }
 
-const { title } = Astro.props
+const { title, transparentHeader } = Astro.props
 import Header from "../components/Header.astro"
 ---
 
@@ -23,7 +24,7 @@ import Header from "../components/Header.astro"
     <title>{title}</title>
   </head>
   <body>
-    <Header />
+    <Header transparent={transparentHeader} />
     <slot />
   </body>
 </html>
