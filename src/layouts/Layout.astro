@@ -14,6 +14,22 @@ import Header from "../components/Header.astro"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
+    <!-- Google Analytics -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-T0ZEJ2WC9D">
+    </script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-T0ZEJ2WC9D");
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
