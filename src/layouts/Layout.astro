@@ -6,6 +6,7 @@ export interface Props {
 
 const { title, transparentHeader } = Astro.props
 import Header from "../components/Header.astro"
+import SEO from "./SEO.astro"
 ---
 
 <!DOCTYPE html>
@@ -13,6 +14,8 @@ import Header from "../components/Header.astro"
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
+    <SEO />
 
     <!-- Google Analytics -->
     <script
