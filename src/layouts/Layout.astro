@@ -17,21 +17,8 @@ import SEO from "./SEO.astro"
 
     <SEO />
 
-    <!-- Google Analytics -->
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-YC1DHGF3G9">
-    </script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-      gtag("config", "G-YC1DHGF3G9");
-    </script>
+    <!-- Plausible -->
+    <script defer data-domain="blakesarah.com" data-api="/plausible/api/event" src="/plausible/js/script.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
