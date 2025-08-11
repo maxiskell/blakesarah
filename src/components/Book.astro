@@ -55,6 +55,7 @@ const { coverImgSrc, title, description, buyLink, videoSrc } = Astro.props
         playsinline
         loop
         muted
+        crossorigin="anonymous"
         class="absolute z-10 min-w-screen max-w-none min-h-screen"
       >
         <source src={videoSrc} type="video/mp4" />
